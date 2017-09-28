@@ -1,4 +1,4 @@
-Vue.component("task", {
+/* Vue.component("task", {
   template: "<li><slot></slot></li>"
 });
 Vue.component("task-list", {
@@ -21,3 +21,4 @@ Vue.component("task-list", {
 new Vue({
   el: "#root"
 });
+ */
