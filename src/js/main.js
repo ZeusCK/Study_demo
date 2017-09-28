@@ -84,7 +84,7 @@ new Vue({
 /**
  * demo 04
  */
-Vue.component("tabs", {
+/* Vue.component("tabs", {
   template: `
   <div>
     <div class="tabs">
@@ -138,12 +138,40 @@ Vue.component("tab", {
 });
 new Vue({
   el: "#root"
-});
+}); */
 
 /**
  * demo 05
  */
+window.Event = new class {
+  constructor() {
+    this.vue = new Vue();
+  }
+  fire(event, data = null) {
+    this.vue.$emit(event, data);
+  }
+  listen(event, callback) {
+    this.vue.$on(event, callback);
+  }
+}();
+Vue.component("coupon", {
+  template: ",<input placeholder='输入信息' @blur='onCouponApplied'>",
+  methods: {
+    onCouponApplied() {
+      Event.fire("applied");
+    }
+  }
+});
 
+new Vue({
+  el: "#root",
+  data: {
+    couponApplied: false
+  },
+  created() {
+    Event.listen("applied", () => alert(1));
+  }
+});
 /**
  * demo 06
  */
