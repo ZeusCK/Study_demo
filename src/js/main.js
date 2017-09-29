@@ -27,8 +27,8 @@ new Vue({
  */
 
 /**
-  * demo 02
-  */
+ * demo 02
+ */
 /* Vue.component("message", {
   props: ["title", "body"],
   data() {
@@ -143,7 +143,7 @@ new Vue({
 /**
  * demo 05
  */
-window.Event = new class {
+/* window.Event = new class {
   constructor() {
     this.vue = new Vue();
   }
@@ -171,7 +171,12 @@ new Vue({
   created() {
     Event.listen("applied", () => alert(1));
   }
-});
+}); */
+
 /**
  * demo 06
  */
+
+new Vue({
+  el: "#root"
+});
