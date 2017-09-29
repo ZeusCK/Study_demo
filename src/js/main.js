@@ -207,7 +207,14 @@ new Vue({
 /**
  * demo 07
  */
-
-/**
- * demo 08
- */
+Vue.component('progress-view', {
+  data() {
+    return {
+      completionRate: 50
+    }
+  },
+  template: ``
+})
+new Vue({
+  el: "#root"
+});
